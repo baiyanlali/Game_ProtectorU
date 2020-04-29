@@ -46,10 +46,13 @@ public class BulletSpownerManager : MonoBehaviour
 
     public bool putOutBulletPool(string name, out GameObject bullet)
     {
+        bullet = null;
         //bool hasGottenBullet = bulletPoolDic.TryGetValue(name, out bullet);
         bool hasGottenBullet = bulletPoolDicList.TryGetValue(name, out bullet);
+        //Debug.Log(hasGottenBullet);
         if (hasGottenBullet)
         {
+            //Debug.Log("Yes");
             bullet.SetActive(true);
             bullet.transform.parent = null;
         }

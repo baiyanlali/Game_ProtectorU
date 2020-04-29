@@ -18,6 +18,10 @@ public class Bullet : MonoBehaviour
     {
 
     }
+    public void reVelocity()
+    {
+        rb2d.velocity = -transform.position.normalized * speed;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.transform.tag)

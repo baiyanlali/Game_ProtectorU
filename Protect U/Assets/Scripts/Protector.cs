@@ -22,7 +22,7 @@ public class Protector : MonoBehaviour
         //Quaternion rotation = Quaternion.LookRotation(vecMouse - (Vector2)transform.position);
         transform.position = vecMouse.normalized;
         float deg=Mathf.Rad2Deg* Mathf.Acos((vecMouse.x * 0 + transform.position.y * 1) / (1 * 1))*-1*transform.position.x/Mathf.Abs(transform.position.x);
-        transform.rotation =  Quaternion.Euler(0,0,deg);
+        transform.rotation =  Quaternion.Euler(0f,0f,deg);
 
         
     }

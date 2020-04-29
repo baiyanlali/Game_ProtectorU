@@ -25,6 +25,7 @@ public class Spowner : MonoBehaviour
     {
         bullet.transform.position = transform.position;
         bullet.transform.rotation = Quaternion.identity;
+        bullet.GetComponent<Bullet>().reVelocity();
     }
 
 }

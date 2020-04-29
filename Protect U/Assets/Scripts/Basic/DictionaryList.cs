@@ -35,6 +35,11 @@ public class DictionaryList<T,K>
         }
         else
         {
+            if (q.Count<=0)
+            {
+                content = default(K);
+                return false;
+            }
             content = q.Dequeue();
             return true;
         }
