@@ -29,6 +29,11 @@ public class BulletSpownerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject [] bullets = GameObject.FindGameObjectsWithTag("bullet");
+        foreach (var bullet in bullets)
+        {
+            Destroy(bullet);
+        }
         foreach (Spowner spw in spownerArr)
         {
             //spw.spownBullet(bullets [0]);
